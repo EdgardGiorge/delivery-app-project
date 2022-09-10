@@ -1,4 +1,14 @@
 import Login from './Login/Login';
+import Register from './Register/Register';
+import Products from './Products/Products';
+import NotFound from './NotFound/NotFound';
+import Orders from './Orders/Orders';
+import SellerOrders from './SellerOrders/SellerOrders';
+import SellerOrderDetails from './SellerOrderDetails/SellerOrderDetails';
+import Checkout from './Checkout/Checkout';
+import Admin from './Admin/Admin';
+import OrdersDetails from './OrdersDetails/OrdersDetails';
+import SaleDetails from './SaleDetails/SaleDetails';
 
 const pages = {
   Login,
