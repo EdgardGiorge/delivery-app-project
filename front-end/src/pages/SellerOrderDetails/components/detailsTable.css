@@ -1,0 +1,75 @@
+.header-details {
+  background-color: rgb(234, 241, 239);
+  color: rgb(6, 24, 19);
+  display: flex;
+  font-size: 2rem;
+  font-weight: 800;
+  justify-content: space-between;
+}
+
+.order-details-container {
+  margin: 2rem;
+}
+
+.sale-status {
+  background-color: rgb(211, 198, 60);
+}
+
+.btn-preparing-check {
+  background-color: rgb(95, 193, 140);
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.btn-dispatch-check {
+  background-color: rgb(50, 108, 83);
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.sale-date {
+  margin-left: 0.9rem;
+  margin-right: 0.9rem;
+}
+
+.sales-container {
+  border: 1px solid rgb(198, 212, 208);
+}
+
+.sale-total {
+  display: flex;
+  justify-content: end;
+}
+
+.span-total {
+  background-color: rgb(50, 108, 83);
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 800;
+  padding: 0.4rem 2rem;
+}
+
+.sub-sales-container {
+  margin: 1rem;
+}
+
+th, td {
+  padding: 0 1rem;
+}
+
+.product-info-table {
+  background-color: rgb(234, 241, 239);
+}
+
+.product-info-id {
+  background-color: rgb(96, 194, 141);
+  font-weight: 800;
+}
