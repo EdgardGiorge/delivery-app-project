@@ -1,27 +1,27 @@
 import Login from './Login/Login';
-// import Register from './Register/Register';
+import Register from './Register/Register';
 import Products from './Products/Products';
-// import NotFound from './NotFound/NotFound';
+import NotFound from './NotFound/NotFound';
 import Orders from './Orders/Orders';
 import SellerOrders from './SellerOrders/SellerOrders';
-// import SellerOrderDetails from './SellerOrderDetails/SellerOrderDetails';
+import SellerOrderDetails from './SellerOrderDetails/SellerOrderDetails';
 import Checkout from './Checkout/Checkout';
 import Admin from './Admin/Admin';
 import OrdersDetails from './OrdersDetails/OrdersDetails';
-// import SaleDetails from './SaleDetails/SaleDetails';
+import SaleDetails from './SaleDetails/SaleDetails';
 
 const pages = {
   Login,
   Orders,
   SellerOrders,
-  // Register,
+  Register,
   Products,
-  // NotFound,
-  // SellerOrderDetails,
+  NotFound,
+  SellerOrderDetails,
   Admin,
   Checkout,
   OrdersDetails,
-  // SaleDetails,
+  SaleDetails,
 };
 
 export default pages;
