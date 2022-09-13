@@ -1,4 +1,4 @@
-const service = require('../services/register.service');
+const service = require('../services/registerService');
 
 const register = async (req, res) => {
   const payload = await service.register(req.body);
