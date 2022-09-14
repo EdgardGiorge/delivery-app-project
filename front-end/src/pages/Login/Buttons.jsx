@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-import api from '../../../services/axios';
+import api from '../../services/axios';
 
 export default function Buttons({ isBtnDisabled, inputInfo }) {
   const [authError, setAuthError] = useState('');
@@ -48,7 +48,7 @@ export default function Buttons({ isBtnDisabled, inputInfo }) {
         className="login-btn password-btn"
         onClick={ () => history.push('/register') }
       >
-        Ainda não tenho conta
+        Ainda não possuo conta
       </button>
     </>
   );

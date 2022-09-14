@@ -14,14 +14,13 @@ export default function Products() {
   }, [pathname]);
 
   return (
-    <header className="client-products-header">
-      <div className="header-nav-links-container">
+    <header>
+      <div>
         {
           isAdministrator ? <div>GERÊNCIA USUÁRIOS</div> : (
             <>
-              <div className="products-link">
+              <div>
                 <Link
-                  className="remove-underline products"
                   to="/customer/products"
                   data-testid="customer_products__element-navbar-link-products"
                 >
@@ -30,7 +29,6 @@ export default function Products() {
                 </Link>
               </div>
               <Link
-                className="remove-underline my-products"
                 to="/customer/orders"
                 data-testid="customer_products__element-navbar-link-orders"
               >
@@ -41,10 +39,9 @@ export default function Products() {
           )
         }
       </div>
-      <div className="header-nav-links-container">
-        <div className="products-link">
+      <div>
+        <div>
           <Link
-            className="remove-underline client-name"
             to="/"
             data-testid="customer_products__element-navbar-user-full-name"
           >
@@ -52,7 +49,6 @@ export default function Products() {
 
           </Link>
           <Link
-            className="remove-underline leave"
             to="/"
             data-testid="customer_products__element-navbar-link-logout"
             onClick={ () => localStorage.removeItem('user') }

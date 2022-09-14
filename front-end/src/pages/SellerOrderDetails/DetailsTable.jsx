@@ -1,32 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './detailsTable.css';
 
 export default function DetailsTable({ orderDetails }) {
-  console.log(orderDetails);
   const tableHeaderCells = ['item',
     'descricao', 'quantidade', 'valor unitario', 'sub-total'];
 
   return (
-    <div className="sales-container">
-      <div className="header-details">
+    <div>
+      <div>
         <div>
           <span>{ `Pedido: ${orderDetails.id}` }</span>
-          <span className="sale-date">
+          <span>
             { orderDetails.saleDate
           && orderDetails.saleDate.split('T')[0].split('-').reverse().join('/') }
           </span>
-          <span className="sale-status">{ orderDetails.status }</span>
+          <span>{ orderDetails.status }</span>
         </div>
         <div>
-          <button className="btn-preparing-check" type="button">Preparando</button>
-          <button className="btn-dispatch-check" type="button">
+          <button type="button">Preparando</button>
+          <button type="button">
             Saiu para entrega
 
           </button>
         </div>
       </div>
-      <div className="sub-sales-container">
+      <div>
         <table>
           <thead>
             <tr>
@@ -39,23 +37,17 @@ export default function DetailsTable({ orderDetails }) {
             {
               orderDetails.products && orderDetails.products.map((product) => (
                 <tr key={ product.id }>
-                  <td className="product-info-id">{ product.id }</td>
-                  <td
-                    className="product-info-table"
-                  >
+                  <td>{ product.id }</td>
+                  <td>
                     { product.name }
 
                   </td>
-                  <td
-                    className="product-info-table"
-                  >
+                  <td>
                     { product.salesProducts.quantity }
 
                   </td>
-                  <td className="product-info-table">{ product.price }</td>
-                  <td
-                    className="product-info-table"
-                  >
+                  <td>{ product.price }</td>
+                  <td>
                     { product.price * product.salesProducts.quantity }
 
                   </td>
@@ -65,8 +57,8 @@ export default function DetailsTable({ orderDetails }) {
 
           </tbody>
         </table>
-        <div className="sale-total">
-          <span className="span-total">
+        <div>
+          <span>
             Total: R$
             {
               `

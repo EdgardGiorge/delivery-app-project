@@ -45,8 +45,6 @@ const getSaleById = async ({ userId, saleId }) => {
 };
 
 const createSale = async (userId, sale) => {
-  // prototipo de criacao
-
   const { id: saleId } = await sales.create({
     ...sale.infos,
     userId,

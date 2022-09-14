@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   updateQuantityItem,
-  calculateCartTottal,
+  calculateCartTotal,
   getCartInLocalStorage,
-} from '../../../utils/localStorage';
+} from '../../utils/localStorage';
 
-export default function Product({ setValueTottal, product }) {
+export default function Product({ setValueTotal, product }) {
   const {
     urlImage: imgLink,
     id: productId,
@@ -28,11 +28,11 @@ export default function Product({ setValueTottal, product }) {
     if (target.value < 0) {
       setProductQuantity(0);
       updateQuantityItem(product, 0);
-      setValueTottal(calculateCartTottal());
+      setValueTotal(calculateCartTotal());
     } else {
       setProductQuantity(target.value);
       updateQuantityItem(product, target.value);
-      setValueTottal(calculateCartTottal());
+      setValueTotal(calculateCartTotal());
     }
   };
 
@@ -40,18 +40,18 @@ export default function Product({ setValueTottal, product }) {
     if (productQuantity === 0) {
       setProductQuantity(0);
       updateQuantityItem(productSub, 0);
-      setValueTottal(calculateCartTottal());
+      setValueTotal(calculateCartTottal());
       return;
     }
     setProductQuantity(productQuantity - 1);
     updateQuantityItem(productSub, productQuantity - 1);
-    setValueTottal(calculateCartTottal());
+    setValueTotal(calculateCartTotal());
   };
 
   const sumProductQty = (productAdd) => {
     setProductQuantity(productQuantity + 1);
     updateQuantityItem(productAdd, productQuantity + 1);
-    setValueTottal(calculateCartTottal());
+    setValueTotal(calculateCartTotal());
   };
 
   return (

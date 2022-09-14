@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Header from '../../components/Header/Header';
-import Product from './components/Product';
+import Product from './Product';
 import api from '../../services/axios';
-import { getValueTottal } from '../../utils/localStorage';
+import { getValueTotal } from '../../utils/localStorage';
 
 export default function Products() {
   const [errorMessage, setErrorMessage] = useState('');
   const [products, setProducts] = useState([]);
-  const [valueTottal, setValueTottal] = useState(() => getValueTottal());
+  const [valueTotal, setValueTotal] = useState(() => getValueTotal());
   const [isDisable, setIsDisable] = useState(true);
   const history = useHistory();
 
@@ -19,12 +19,12 @@ export default function Products() {
   }, []);
 
   useEffect(() => {
-    if (valueTottal > 0) {
+    if (valueTotal > 0) {
       setIsDisable(false);
     } else {
       setIsDisable(true);
     }
-  }, [valueTottal]);
+  }, [valueTotal]);
 
   const handleCart = () => {
     history.push('/customer/checkout');
@@ -33,7 +33,7 @@ export default function Products() {
   return (
     <>
       <Header />
-      <h1>Tela de produtos</h1>
+      <h1>Tela de Produtos</h1>
       { errorMessage && <p>{errorMessage}</p>}
       <section className="products-section">
         <div className="products-container">
@@ -42,7 +42,7 @@ export default function Products() {
               <Product
                 product={ el }
                 key={ el.id }
-                setValueTottal={ setValueTottal }
+                setValueTotal={ setValueTotal }
               />
             ))
           }
@@ -59,7 +59,7 @@ export default function Products() {
               data-testid="customer_products__checkout-bottom-value"
             >
               {' '}
-              {valueTottal.toFixed(2).replace('.', ',')}
+              {valueTotal.toFixed(2).replace('.', ',')}
             </h2>
 
           </button>

@@ -1,4 +1,4 @@
-const TOKEN_NOT_FOUND = { status: 401, message: 'Campo token é obrigatorio.' };
+const TOKEN_NOT_FOUND = { status: 401, message: 'Campo token é obrigatório.' };
 const INVALID_TOKEN = { status: 401, message: 'Token inválido.' };
 const USER_NOT_FOUND = { status: 404, message: 'Usuário não encontrado.' };
 const ORDER_NOT_FOUND = { status: 404, message: 'Pedido não encontrado.' };

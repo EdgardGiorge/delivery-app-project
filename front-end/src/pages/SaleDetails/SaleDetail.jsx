@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import SaleDetailsTable from './SaleDetailsTable';
-import api from '../../../utils/axios';
+import SaleDetailsTable from './SaleDetailTable';
+import api from '../../utils/axios';
 
 const TESTID = 'seller_order_details__element-order-details-label-delivery-status';
 

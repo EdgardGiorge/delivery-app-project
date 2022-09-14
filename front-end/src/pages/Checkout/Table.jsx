@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { removeProduct, calculateCartTottal } from '../../../utils/localStorage';
+import { removeProduct, calculateCartTotal } from '../../utils/localStorage';
 
 function Table({ products, setProducts, setTotal }) {
   const handleRemoveProduct = (id) => {
     const newProducts = removeProduct(id);
-    const newTotal = calculateCartTottal();
+    const newTotal = calculateCartTotal();
     setProducts(newProducts);
     setTotal(newTotal);
   };
@@ -16,9 +16,9 @@ function Table({ products, setProducts, setTotal }) {
         <th>Item</th>
         <th>Descrição</th>
         <th>Quantidade</th>
-        <th>Valor Unitario</th>
+        <th>Valor Unitário</th>
         <th>Subtotal</th>
-        <th>Removar</th>
+        <th>Remover</th>
       </tr>
       { products && products.map((item, index) => (
         <tr key={ item.nome }>

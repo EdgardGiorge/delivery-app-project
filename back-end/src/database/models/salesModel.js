@@ -29,7 +29,7 @@ const sales = (sequelize, DataTypes) => {
         type: DataTypes.DATE,
         field: 'sale_date',
         defaultValue: DataTypes.NOW,
-        get: function () { // or use get(){ }
+        get: function () {
           return this.getDataValue('saleDate')
             .toLocaleString('pt-BR', { timeZone: 'UTC' });
         }

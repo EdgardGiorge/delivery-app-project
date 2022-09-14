@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from '../../components/Header/Header';
-import TableDetails from './components/TableDetails';
+import TableDetails from './TableDetails';
 import api from '../../services/axios';
 
 /* Projeto em grupo: Quando o grupo definiu que eu não participaria mais, comecei a adiantar as telas na nova branch do PR individual, agora repassando para a branch oficial "18"  */
@@ -25,7 +25,6 @@ export default function OrdersDetails() {
       api
         .get(URL, { headers: { authorization: user.token } })
         .then(({ data }) => {
-          console.log(data);
           setProducts(data.products);
           setTotalPrice(data.totalPrice);
           setSeller(data.seller.name);

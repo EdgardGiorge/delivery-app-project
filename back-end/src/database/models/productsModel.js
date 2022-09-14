@@ -1,5 +1,5 @@
 const Products = (sequelize, DataTypes) => {
-  const tableProducts = sequelize.define("products",
+  const tableProducts = sequelize.define('products',
     {
       name: DataTypes.STRING,
       price: DataTypes.DECIMAL,
@@ -8,8 +8,7 @@ const Products = (sequelize, DataTypes) => {
         field: 'url_image',
       },
     },
-    { timestamps: false, tableName: 'products' }
-  );
+    { timestamps: false, tableName: 'products' });
 
   return tableProducts;
 };

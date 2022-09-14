@@ -1,5 +1,7 @@
 const CART = 'carrinho';
 
+/* Projeto em grupo: Quando o grupo definiu que eu não participaria mais, comecei a adiantar as telas na nova branch do PR individual, agora repassando para a branch oficial "18"  */
+
 export const getCartInLocalStorage = () => {
   const cart = localStorage.getItem(CART);
   if (!cart) {
@@ -53,7 +55,7 @@ export const updateQuantityItem = (product, quantity) => {
   localStorage.setItem(CART, JSON.stringify(cartUpdated));
 };
 
-export const calculateCartTottal = () => {
+export const calculateCartTotal = () => {
   const cart = getCartInLocalStorage();
   const total = cart.reduce((acc, cur) => {
     const valueItem = (cur.quantity * cur.price);
@@ -64,7 +66,7 @@ export const calculateCartTottal = () => {
   return total;
 };
 
-export const getValueTottal = () => {
+export const getValueTotal = () => {
   const total = localStorage.getItem('total');
   if (!total) {
     return 0;

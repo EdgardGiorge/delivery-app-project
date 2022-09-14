@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-import api from '../../../utils/axios';
+import api from '../../utils/axios';
 
 export default function Button({ isButtonActive, infos, setError }) {
   const history = useHistory();
@@ -29,7 +29,6 @@ export default function Button({ isButtonActive, infos, setError }) {
     <button
       type="button"
       data-testid="common_register__button-register"
-      // className="login-btn login-btn-id"
       disabled={ isButtonActive }
       onClick={ handleButton }
     >

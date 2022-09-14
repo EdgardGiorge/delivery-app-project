@@ -15,13 +15,11 @@ export default function Order({
   return (
     <button
       type="button"
-      className="orderCardBox"
       onClick={ () => history.push(`/customer/orders/${orderNumber}`) }
     >
-      <div className="orderNumberBox">
+      <div>
         <div>Pedido</div>
         <div
-          className="orderNumber"
           data-testid={ `customer_orders__element-order-id-${orderNumber}` }
         >
           {orderNumber}
@@ -30,22 +28,19 @@ export default function Order({
       </div>
       <div>
         <div
-          className="orderStatus"
           data-testid={ `customer_orders__element-delivery-status-${orderNumber}` }
         >
           {orderStatus}
         </div>
       </div>
-      <div className="orderDateAndPriceBox">
+      <div>
         <div
-          className="orderDate"
           data-testid={ `customer_orders__element-order-date-${orderNumber}` }
         >
           {orderDate.split(' ')[0]}
         </div>
         <br />
         <div
-          className="orderPrice"
           data-testid={ `customer_orders__element-card-price-${orderNumber}` }
         >
           {Number(orderPrice).toFixed(2).replace('.', ',')}

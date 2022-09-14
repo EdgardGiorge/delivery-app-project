@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import SellerOrder from './SellerOrder';
-import api from '../../../services/axios';
+import api from '../../services/axios';
 
 /* Projeto em grupo: Quando o grupo definiu que eu não participaria mais, comecei a adiantar as telas na nova branch do PR individual, agora repassando para a branch oficial "18"  */
 
@@ -19,7 +19,7 @@ export default function SellerOrdersList() {
   console.log('backEndInfo: ', backEndInfo);
 
   return (
-    <div className="SellerOrdersFatherBox">
+    <div>
       {backEndInfo.map((order) => (
         <SellerOrder
           key={ order.id }

@@ -2,8 +2,9 @@ import React from 'react';
 import {
   Switch, Route, Redirect,
 } from 'react-router-dom';
-import './App.css';
 import pages from './pages';
+
+/* Projeto em grupo: Quando o grupo definiu que eu não participaria mais, comecei a adiantar as telas na nova branch do PR individual, agora repassando para a branch oficial "18"  */
 
 function App() {
   return (
@@ -26,7 +27,6 @@ function App() {
 
       <Route exact path="/customer/orders/:id" component={ pages.OrdersDetails } />
       <Route exact path="/seller/orders" component={ pages.SellerOrders } />
-      {/* <Route exact path="/seller/orders/:id" component={ pages.SellerOrderDetails } /> */}
 
       <Route exact path="/admin/manage" component={ pages.Admin } />
       <Route exact path="*" component={ pages.NotFound } />

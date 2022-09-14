@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import Form from './components/Form';
-import Table from './components/Table';
+import Form from './Form';
+import Table from './Table';
 import Header from '../../components/Header/Header';
 import {
   getCartInLocalStorage,
-  getValueTottal,
+  getValueTotal,
   cleanCart,
 } from '../../utils/localStorage';
 import api from '../../services/axios';
 
 export default function Checkout() {
   const [products, setProducts] = useState(() => getCartInLocalStorage());
-  const [total, setTotal] = useState(() => getValueTottal());
+  const [total, setTotal] = useState(() => getValueTotal());
   const [infoUser, setUserInfo] = useState({});
   const history = useHistory();
 

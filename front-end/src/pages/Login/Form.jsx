@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Buttons from './Buttons';
-import EMAIL_REGEX from '../../../utils/constants';
-import api from '../../../services/axios';
+import EMAIL_REGEX from '../../utils/constants';
+import api from '../../services/axios';
 
 /* Projeto em grupo: Quando o grupo definiu que eu não participaria mais, comecei a adiantar as telas na nova branch do PR individual, agora repassando para a branch oficial "18"  */
 
@@ -73,14 +73,13 @@ export default function Form() {
   };
 
   return (
-    <main className="mainForm">
+    <main>
 
-      <form className="login-form">
+      <form>
         <label htmlFor="emailInput">
           Login
           <input
             id="emailInput"
-            className="login-input"
             type="email"
             name="emailInput"
             data-testid="common_login__input-email"
@@ -93,7 +92,6 @@ export default function Form() {
           Senha
           <input
             id="passwordInput"
-            className="login-input"
             type="password"
             name="passwordInput"
             data-testid="common_login__input-password"

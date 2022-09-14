@@ -50,13 +50,12 @@ export default function Form() {
   };
 
   return (
-    <main className="mainForm">
-      <form className="login-form">
+    <main>
+      <form>
         <label htmlFor="name">
           Name
           <input
             id="name"
-            className="login-input"
             type="text"
             name="name"
             data-testid="common_register__input-name"
@@ -67,7 +66,6 @@ export default function Form() {
           Email
           <input
             id="email"
-            className="login-input"
             type="email"
             name="email"
             data-testid="common_register__input-email"
@@ -78,7 +76,6 @@ export default function Form() {
           Senha
           <input
             id="password"
-            className="login-input"
             type="password"
             name="password"
             data-testid="common_register__input-password"

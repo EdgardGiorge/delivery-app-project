@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import api from '../../../services/axios';
+import api from '../../services/axios';
 
 export default function Form({ executeSale, products, totalPrice }) {
   const [sellers, setSellers] = useState([]);
@@ -8,7 +8,7 @@ export default function Form({ executeSale, products, totalPrice }) {
   const [deliveryNumber, setDeliveryNumber] = useState('');
   const [sellerId, setSellerId] = useState(0);
 
-  const getSllersAPI = async () => {
+  const getSellersAPI = async () => {
     const { data } = await api.get('/customer/sellers');
     setSellers(data);
     setSellerId(data[0].id);
@@ -27,7 +27,7 @@ export default function Form({ executeSale, products, totalPrice }) {
   };
 
   useEffect(() => {
-    getSllersAPI();
+    getSellersAPI();
   }, []);
 
   const handleClickFinalizar = async () => {

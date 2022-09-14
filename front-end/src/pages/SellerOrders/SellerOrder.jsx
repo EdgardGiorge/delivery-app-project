@@ -16,13 +16,11 @@ export default function SellerOrder({
   return (
     <button
       type="button"
-      className="orderCardBox"
       onClick={ () => history.push(`/seller/orders/${sellerOrderNumber}`) }
     >
-      <div className="orderNumberBox">
+      <div>
         <div>Pedido</div>
         <div
-          className="orderNumber"
           data-testid={ `seller_orders__element-order-id-${sellerOrderNumber}` }
         >
           {sellerOrderNumber}
@@ -31,15 +29,13 @@ export default function SellerOrder({
       </div>
       <div>
         <div
-          className="orderStatus"
           data-testid={ `seller_orders__element-delivery-status-${sellerOrderNumber}` }
         >
           {sellerOrderStatus}
         </div>
       </div>
-      <div className="orderDateAndPriceBox">
+      <div>
         <div
-          className="orderDate"
           data-testid={ `seller_orders__element-order-date-${sellerOrderNumber}` }
         >
 
@@ -47,7 +43,6 @@ export default function SellerOrder({
         </div>
         <br />
         <div
-          className="orderPrice"
           data-testid={ `seller_orders__element-card-price-${sellerOrderNumber}` }
         >
           {Number(sellerOrderPrice).toFixed(2).replace('.', ',')}

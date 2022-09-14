@@ -10,7 +10,7 @@ export default function TableDetails({ products }) {
         <th>Item</th>
         <th>Descrição</th>
         <th>Quantidade</th>
-        <th>Valor Unitario</th>
+        <th>Valor Unitário</th>
         <th>Subtotal</th>
       </tr>
       {products

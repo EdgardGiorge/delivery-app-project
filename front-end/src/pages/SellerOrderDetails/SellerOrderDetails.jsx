@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../../services/axios';
-import DetailsTable from './components/DetailsTable';
+import DetailsTable from './DetailsTable';
 
 export default function SellerOrderDetails() {
   const { id } = useParams();
@@ -21,7 +21,7 @@ export default function SellerOrderDetails() {
   }, [id]);
 
   return (
-    <div className="order-details-container">
+    <div>
       <h2>Detalhes do Pedido</h2>
       <DetailsTable orderDetails={ orders } />
     </div>
